@@ -1,11 +1,10 @@
 <form class="form-signin" data-ng-show="vm.allow">
     <h2 class="form-signin-heading">Войдите</h2>
     <label for="login" class="sr-only">Логин</label>
-    <input type="text" id="login" class="form-control" placeholder="Логин" required autofocus
-           Add a comment to this line
-           data-ng-model="vm.user.login">
+    <input type="text" id="login" class="form-control" placeholder="Логин" required=""
+           data-ng-model="vm.user.login"> </input>
     <label for="password" class="sr-only">Пароль</label>
-    <input type="password" id="password" class="form-control" placeholder="Пароль" required
-           data-ng-model="vm.user.password">
+    <input type="password" id="password" class="form-control" placeholder="Пароль" required=""
+           data-ng-model="vm.user.password"></input>
     <button class="btn btn-lg btn-primary btn-block" type="submit" data-ng-click="vm.login()">Войти</button>
 </form>
