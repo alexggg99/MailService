@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <META HTTP-EQUIV="content-type" CONTENT="TEXT/HTML; charset=utf-8"/>
+    <title>Simple App</title>
+
+    <link th:href="@{/webjars/bootstrap/3.3.1/css/bootstrap.min.css}"
+          href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap.css" rel="stylesheet" media="screen">
+    </link>
+    <link rel="stylesheet" href="app.css" />
+</head>
+
+
+<body ng-app="myApp">
+<nav class="top-bar">
+    <ul class="title-area">
+        <!-- Title area-->
+        <li class="name">
+            <h1><a href="/">My home messenger</a></h1>
+        </li>
+    </ul>
+
+    <section class="top-bar-section">
+        <ul class="right">
+            <li><a href="#/">Home</a></li>
+            <li><a href="#/settings">Settings</a></li>
+        </ul>
+    </section>
+</nav>
+
+<div ng-view=""></div>
+
+
+<script src="http://cdn.jsdelivr.net/webjars/angularjs/1.3.8/angular.min.js"
+        th:src="@{/webjars/angularjs/1.3.15/angular.min.js}"></script>
+<!--<script type="text/javascript" src="../js/app.js"-->
+        <!--th:src="@{/js/app.js}"></script>-->
+
+<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>-->
+<!--<script src="js/app.js"></script>-->
+<!--<script src="js/controllers/SettingsController.js"></script>-->
+<!--<script src="js/controllers/MailListingController.js"></script>-->
+<!--<script src="js/controllers/ContentController.js"></script>-->
+<!--<script src="js/services/mailService.js"></script>-->
+<!--<script src="js/controllers/HomeController.js"></script>-->
+</body>
+</html>
