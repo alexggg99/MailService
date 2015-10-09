@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @Transactional
 public interface EmailDAO extends CrudRepository<Email, Long> {
-    Optional<Email> getEmailById(long id);
-    Optional<Email> getEmailBySubject(String subject);
-    List<Email> getAllEmail();
+    Optional<Email> getById(long id);
+    Optional<Email> getBySubject(String subject);
+    List<Email> getAll();
 }

@@ -12,8 +12,8 @@ import java.util.Optional;
 
 @Transactional
 public interface PersonDAO extends CrudRepository<Person, Long> {
-    Optional<Person> getPersonById(long id);
-    Optional<Person> getPersonByName(String name);
-    Optional<Person> getPersonByNickname(String nickname);
-    List<Person> getAllPerson();
+    Optional<Person> findById(long id);
+    Optional<Person> findByName(String name);
+    Optional<Person> findByNickname(String nickname);
+    List<Person> findAll();
 }

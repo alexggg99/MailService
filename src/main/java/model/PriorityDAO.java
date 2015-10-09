@@ -12,8 +12,8 @@ import java.util.Optional;
 
 @Transactional
 public interface PriorityDAO extends CrudRepository<Priority, Long> {
-    Optional<Priority> getPriorityByName(String name);
-    Optional<Priority> getPriorityById(long id);
-    Optional<Priority> getPriorityByPriority(int priority);
-    List<Priority> getAllPriority();
+    Optional<Priority> findByName(String name);
+    Optional<Priority> findById(long id);
+    Optional<Priority> findByPriority(int priority);
+    List<Priority> findAll();
 }
