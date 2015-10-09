@@ -24,6 +24,11 @@ public class IndexController {
         return "home";
     }
 
+    @RequestMapping("/log")
+    public String login() {
+        return "login";
+    }
+
     @RequestMapping("/settings")
     public String settings(){return "settings";}
 
