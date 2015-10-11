@@ -61,14 +61,14 @@ public class RESTController {
             "  ]\n" +
             "}";
 
-//    @Autowired
-//    private EmailDAO emailDAO;
+    @Autowired
+    private EmailDAO emailDAO;
 
-//    @RequestMapping(value = "/api/mail")
-//    public ResponseEntity<List<Email>> getEmails() {
-//        List<Email> result = emailDAO.findAll();
-//        return new ResponseEntity<List<Email>>(result, HttpStatus.OK);
-//    }
+    @RequestMapping(value = "/api/mail")
+    public ResponseEntity<List<Email>> getEmails() {
+        List<Email> result = (List<Email>) emailDAO.findAll();
+        return new ResponseEntity<List<Email>>(result, HttpStatus.OK);
+    }
 
 //    @RequestMapping(value = "/api/send", method = RequestMethod.POST)
 //    public ResponseEntity<Email> sendEmail(@RequestBody Email m) {

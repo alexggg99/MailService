@@ -18,8 +18,7 @@ public class IndexController {
         return "index";
     }
 
-    @RequestMapping(value = "/home", produces = "application/json")
-    @ResponseBody
+    @RequestMapping(value = "/home")
     public String home(){
         return "home";
     }

@@ -29,12 +29,12 @@ public class Email implements Serializable{
     @JsonProperty(value = "id")
     private long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "PERSON_FROM_ID")
     @JsonProperty(value = "person_from")
     private Person personFrom;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "PERSON_TO_ID")
     @JsonProperty(value = "person_to")
     private Person personTo;
@@ -52,7 +52,7 @@ public class Email implements Serializable{
     @JsonProperty(value = "send_date")
     private Date sendDate;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "PRIORITY_ID")
     @JsonProperty(value = "priority")
     private Priority priority;

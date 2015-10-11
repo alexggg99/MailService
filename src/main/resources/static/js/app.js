@@ -20,7 +20,7 @@
 //
 //app.controller('HomeController', HomeController);
 
-var app = angular.module('myApp', []);
+var app = angular.module('myApp', ['ngRoute']);
 
 //Define Routing for app
 app.config(['$routeProvider',
