@@ -12,7 +12,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @ComponentScan(basePackages = { "controllers","model" })
 @EnableAutoConfiguration
 @EnableJpaRepositories
-@EntityScan
+@EntityScan(basePackages = "model")
 public class EmailServiceApplication {
 
     public static void main(String[] args) {

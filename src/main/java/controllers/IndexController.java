@@ -23,6 +23,11 @@ public class IndexController {
         return "home";
     }
 
+    @RequestMapping(value = "/replay")
+    public String replay(){
+        return "replay";
+    }
+
     @RequestMapping("/login")
     public String login() {
         return "login";

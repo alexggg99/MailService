@@ -34,6 +34,10 @@ app.config(['$routeProvider',
                 templateUrl: 'settings.html',
                 controller: 'SettingsController'
             }).
+            when('/replay', {
+                templateUrl: 'replay.html',
+                controller: 'HomeController'
+            }).
             otherwise({
                 redirectTo: '/'
             });
