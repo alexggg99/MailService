@@ -1,6 +1,8 @@
 package model;
 
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
@@ -15,4 +17,7 @@ import java.util.Optional;
 public interface EmailDAO extends CrudRepository<Email, Long> {
 //    Optional<Email> getById(long id);
 //    Optional<Email> getBySubject(String subject);
+
+    @Query("SELECT p FROM Email p where p.personTo.nickname = :nickname")
+    Optional<List<Email>> findByPersonTo(@Param("nickname") String nickname);
 }

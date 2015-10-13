@@ -12,7 +12,12 @@ import java.util.Date;
 
 @Entity
 @Table(name = "EMAILS")
+@NamedQueries({
+        @NamedQuery(name = Email.GETEMAILBYNICKNAME , query = "select m from Email m")
+})
 public class Email implements Serializable{
+
+    public static final String GETEMAILBYNICKNAME = "Email.GetEmailByNickname";
 
     public Email() {
     }

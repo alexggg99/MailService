@@ -39,7 +39,7 @@ public class Person implements Serializable{
     @JsonProperty(value = "name")
     private String name;
 
-    @Column(name = "NICKNAME")
+    @Column(name = "NICKNAME", unique = true)
     @JsonProperty(value = "nickname")
     private String nickname;
 
